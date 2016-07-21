@@ -235,7 +235,7 @@ $(document).ready(function() {
 	==============================================*/
 	$.backstretch('/assets/header-bg.jpg');
 
-	$('body').append('<img class="preload-image" src="/assets/contact-bg.jpg" style="display:none;"/>');
+	$('body').append('<img class="preload-image" src="/assets/contact-bg.jpg"style="display:none;"/>');
 
 	$('#about').waypoint(function(direction){
 	

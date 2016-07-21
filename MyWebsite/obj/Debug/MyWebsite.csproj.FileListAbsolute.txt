@@ -77,6 +77,6 @@ c:\users\oosaj\documents\visual studio 2015\Projects\MyWebsite\MyWebsite\bin\Mic
 c:\users\oosaj\documents\visual studio 2015\Projects\MyWebsite\MyWebsite\bin\Microsoft.Owin.Security.Google.xml
 c:\users\oosaj\documents\visual studio 2015\Projects\MyWebsite\MyWebsite\bin\Microsoft.Owin.Security.Twitter.xml
 c:\users\oosaj\documents\visual studio 2015\Projects\MyWebsite\MyWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-c:\users\oosaj\documents\visual studio 2015\Projects\MyWebsite\MyWebsite\obj\Debug\MyWebsite.csprojResolveAssemblyReference.cache
 c:\users\oosaj\documents\visual studio 2015\Projects\MyWebsite\MyWebsite\obj\Debug\MyWebsite.dll
 c:\users\oosaj\documents\visual studio 2015\Projects\MyWebsite\MyWebsite\obj\Debug\MyWebsite.pdb
+c:\users\oosaj\documents\visual studio 2015\Projects\MyWebsite\MyWebsite\obj\Debug\MyWebsite.csprojResolveAssemblyReference.cache

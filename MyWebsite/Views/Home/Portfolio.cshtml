@@ -1,0 +1,507 @@
+﻿
+<section id="portfolio">
+
+    <div id="portfolio-header" class="text-center">
+
+        <h1 class="section-title scrollimation scale-in"><span> My works</span> @*I am proud of*@<i class="fa fa-pencil"></i></h1>
+
+        <!--==== Portfolio Filters ====-->
+        @*<div id="filter-works">
+                <ul>
+                    <li class="active">
+                        <a href="#" data-filter="*">All</a>
+                    </li>
+                    <li>
+                        <a href="#" data-filter=".web-design">Web Design</a>
+                    </li>
+                    <li>
+                        <a href="#" data-filter=".icons">Icons</a>
+                    </li>
+                    <li>
+                        <a href="#" data-filter=".ui-kits">UI Kits</a>
+                    </li>
+                </ul>
+            </div>*@<!--End portfolio filters -->
+
+    </div><!--End portfolio header -->
+
+    <div class="container masonry-wrapper scrollimation fade-in">
+
+        <div id="projects-container">
+
+            <!-- ==============================================
+            SINGLE PROJECT ITEM
+            =============================================== -->
+            <a class="project-item web-design" href="#" data-toggle="modal" data-target="#myModal">
+
+                <img class="img-responsive project-image" src="~/assets/projects/js.png" alt=""><!--Project thumb -->
+
+                <div class="hover-mask">
+                    <h2 class="project-title">JavaScript Exercise</h2><!--Project Title -->
+                    <p>js.com</p><!--Project Subtitle -->
+                </div>
+
+                <!--==== Project Preview HTML ====-->
+            </a>
+
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Javascript Exercise</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#program1">MMMSP</a></li>
+                                    <li><a data-toggle="tab" href="#menu1">FACTORIAL</a></li>
+                                    <li><a data-toggle="tab" href="#menu2">FIZZBUZZ</a></li>
+                                    <li><a data-toggle="tab" href="#menu3">PALINDROME</a></li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div id="program1" class="tab-pane fade in active">
+                                        <h3>Click Start button to start the program.</h3>
+                                        <p>
+                                            <button type="button" class="btn btn-primary" onclick="StartProgram1()">Start</button>
+                                            <div id="output1">
+
+                                            </div>
+                                            <button data-toggle="collapse" data-target="#demo">View Code</button>
+                                            <br />
+                                            <div id="demo" class="collapse" style="color:#8aaad9">
+                                                function StartProgram1() { <br />
+                                                var sum = 0; <br />
+                                                var min = 0;<br />
+                                                var max = 0;<br />
+                                                var mean = 0;<br />
+                                                var product = 1;<br />
+                                                for (var i = 0; i < 5; i++) {<br />
+                                                var number = prompt("Please enter number", "");<br />
+                                                sum += parseFloat(number);<br />
+                                                product *= parseFloat(number);<br />
+                                                if (i == 0) {<br />
+                                                min = number;<br />
+                                                max = number;<br />
+                                                }<br />
+                                                if (number < min) {<br />
+                                                min = number;<br />
+                                                }<br />
+                                                if (number > max) {<br />
+                                                max = number;<br />
+                                                }<br />
+                                                }<br />
+                                                document.getElementById('output1').innerHTML = "Minimum: " + min + "<br />Maximum: " + max + "<br />Mean: " + sum / 5 + "<br />Sum: " + sum + "<br />Product: " + product;<br />
+                                                }<br />
+                                            </div>
+
+                                        </p>
+                                    </div>
+                                    <div id="menu1" class="tab-pane fade">
+                                        <h3>Enter number to calculate the factorial.</h3>
+                                        <p>
+                                            <input type="text" class="form-control" id="txtnumber" placeholder="Enter Number" /><br />
+                                            <button type="button" class="btn btn-primary" onclick="StartProgram2()">Calculate Factorial</button>
+                                            <div id="output2">
+
+                                            </div>
+                                            <button data-toggle="collapse" data-target="#demo1">View Code</button>
+                                            <br />
+                                            <div id="demo1" class="collapse" style="color:#8aaad9">
+                                                function StartProgram2() {<br />
+                                                var num = parseInt(document.getElementById('txtnumber').value);<br />
+                                                var fact;<br />
+                                                if (num < 0) {<br />
+                                                fact = -1;<br />
+                                                }<br />
+                                                // If the number is 0, its factorial is 1.<br />
+                                                else if (num == 0) {<br />
+                                                fact = 1;<br />
+                                                }<br />
+                                                else {<br />
+                                                fact = num;<br />
+                                                while (num-- > 2) {<br />
+                                                fact *= num;<br />
+                                                }<br />
+                                                }<br />
+                                                document.getElementById('output2').innerHTML = "Factorial: " + fact;<br />
+                                                }<br />
+                                            </div>
+                                        </p>
+                                    </div>
+                                    <div id="menu2" class="tab-pane fade">
+                                        <h3>Enter two numbers.</h3>
+                                        <p>
+                                            <input type="text" class="form-control" id="txtnumber1" placeholder="Enter Number" /><br />
+                                            <input type="text" class="form-control" id="txtnumber2" placeholder="Enter Number" /><br />
+                                            <button type="button" class="btn btn-primary" onclick="StartProgram3()">Start</button>
+                                            <div id="output3">
+
+                                            </div>
+                                            <button data-toggle="collapse" data-target="#demo2">View Code</button>
+                                            <br />
+                                            <div id="demo2" class="collapse" style="color:#8aaad9">
+                                                function StartProgram3() {<br />
+                                                var num1 = parseInt(document.getElementById('txtnumber1').value);<br />
+                                                var num2 = parseInt(document.getElementById('txtnumber2').value);<br />
+                                                document.getElementById('output3').innerHTML = "";<br />
+                                                for (var i = 1; i <= 100; i++) {<br />
+                                                if (i % num1 == 0 && i % num2 == 0) {<br />
+                                                document.getElementById('output3').innerHTML += "FizzBuzz";<br />
+                                                }<br />
+                                                else if (i % num1 == 0) {<br />
+                                                document.getElementById('output3').innerHTML += "Fizz";<br />
+                                                }<br />
+                                                else if (i % num2 == 0) {<br />
+                                                document.getElementById('output3').innerHTML += "Buzz";<br />
+                                                }<br />
+                                                else{<br />
+                                                document.getElementById('output3').innerHTML += "i"}<br />
+                                                }<br />
+                                                }<br />
+                                            </div>
+                                        </p>
+                                    </div>
+                                    <div id="menu3" class="tab-pane fade">
+                                        <h3>Enter word for check its Palindrome </h3>
+                                        <p>
+                                            <input type="text" class="form-control" id="txtword" placeholder="Enter word" /><br />
+                                            <button type="button" class="btn btn-danger" onclick="StartProgram4()">Check Palindrome</button>
+                                            <div id="output4">
+
+                                            </div>
+                                            <button data-toggle="collapse" data-target="#demo3">View Code</button>
+                                            <br />
+                                            <div id="demo3" class="collapse" style="color:#8aaad9">
+                                                function StartProgram4() {<br />
+                                                var word = document.getElementById('txtword').value;<br />
+                                                if (isPalindrome(word)) {<br />
+                                                document.getElementById('output4').innerHTML = "The word is Palindrome";<br />
+                                                }<br />
+                                                else {<br />
+                                                document.getElementById('output4').innerHTML = "The word is not Palindrome";<br />
+                                                }<br />
+                                                }<br />
+                                                <br /><br />
+                                                function isPalindrome(str) {<br />
+                                                var len = str.length;<br />
+                                                for (var i = 0; i < Math.floor(len / 2) ; i++) {<br />
+                                                if (str[i] !== str[len - 1 - i]) {<br />
+                                                return false;<br />
+                                                }<br />
+                                                }<br />
+                                                return true;<br />
+                                                }<br />
+                                            </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                                    function StartProgram1() {
+                                        var sum = 0;
+                                        var min = 0;
+                                        var max = 0;
+                                        var mean = 0;
+                                        var product = 1;
+                                        for (var i = 0; i < 5; i++) {
+                                            var number = prompt("Please enter number", "");
+                                            sum += parseFloat(number);
+                                            product *= parseFloat(number);
+                                            if (i == 0) {
+                                                min = number;
+                                                max = number;
+                                            }
+                                            if (number < min) {
+                                                min = number;
+                                            }
+                                            if (number > max) {
+                                                max = number;
+                                            }
+                                        }
+                                        document.getElementById('output1').innerHTML = "Minimum: " + min + "<br />Maximum: " + max + "<br />Mean: " + sum / 5 + "<br />Sum: " + sum + "<br />Product: " + product;
+                                    }
+
+                                    ////////////////////
+
+                                    function StartProgram2() {
+                                        var num = parseInt(document.getElementById('txtnumber').value);
+                                        var fact;
+                                        if (num < 0) {
+                                            fact = -1;
+                                        }
+                                            // If the number is 0, its factorial is 1.
+                                        else if (num == 0) {
+                                            fact = 1;
+                                        }
+                                        else {
+                                            fact = num;
+                                            while (num-- > 2) {
+                                                fact *= num;
+                                            }
+                                        }
+                                        document.getElementById('output2').innerHTML = "Factorial: " + fact;
+                                    }
+                                    ///////////////////////////////////
+
+                                    function StartProgram3() {
+                                        var num1 = parseInt(document.getElementById('txtnumber1').value);
+                                        var num2 = parseInt(document.getElementById('txtnumber2').value);
+                                        document.getElementById('output3').innerHTML = "";
+                                        for (var i = 1; i <= 100; i++) {
+                                            if (i % num1 == 0 && i % num2 == 0) {
+                                                document.getElementById('output3').innerHTML += "FizzBuzz <br />";
+                                            }
+                                            else if (i % num1 == 0) {
+                                                document.getElementById('output3').innerHTML += "Fizz <br />";
+                                            }
+                                            else if (i % num2 == 0) {
+                                                document.getElementById('output3').innerHTML += "Buzz <br />";
+                                            }
+                                            else {
+                                                document.getElementById('output3').innerHTML += i + " <br />";
+                                            }
+                                        }
+                                    }
+
+                                    ///////////////////////////////////////
+
+                                    function StartProgram4() {
+                                        var word = document.getElementById('txtword').value.toLowerCase();
+                                        if (isPalindrome(word)) {
+                                            document.getElementById('output4').innerHTML = "The word is Palindrome";
+                                        }
+                                        else {
+                                            document.getElementById('output4').innerHTML = "The word is not Palindrome";
+                                        }
+                                    }
+
+                                    function isPalindrome(str) {
+                                        var len = str.length;
+                                        for (var i = 0; i < Math.floor(len / 2) ; i++) {
+                                            if (str[i] !== str[len - 1 - i]) {
+                                                return false;
+                                            }
+                                        }
+                                        return true;
+                                    }
+                            </script>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- ==============================================
+            END PROJECT ITEM
+            =============================================== -->
+
+            <a class="project-item icons ui-kits" href="#somelink" data-images="~/assets/projects/project-slide.jpg">
+
+                <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
+
+                <div class="hover-mask">
+                    <h2 class="project-title">Flat UI Kit</h2><!--Project Title -->
+                    <p>microsoft.com</p><!--Project Subtitle -->
+                </div>
+
+                <!--==== Project Preview HTML ====-->
+
+                <div class="sr-only project-description">
+                    <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu. Nam eget urna pellentesque nisl ultrices dapibus. Mauris accumsan vehicula nisl, sed tempus mauris facilisis eu. Donec a iaculis nisi, quis malesuada justo. Pellentesque ut enim sit amet ipsum dignissim egestas. Morbi tincidunt rhoncus urna eget placerat.</p>
+                </div>
+
+            </a><!--End Project Item -->
+
+            <a class="project-item web-design ui-kits" href="#somelink" data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg">
+
+                <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
+
+                <div class="hover-mask">
+                    <h2 class="project-title">Singolo</h2><!--Project Title -->
+                    <p>amazon.com</p><!--Project Subtitle -->
+                </div>
+
+                <!--==== Project Preview HTML ====-->
+
+                <div class="sr-only project-description">
+                    <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                </div>
+
+            </a><!--End Project Item -->
+
+            <a class="project-item ui-kits" href="http://www.google.com" data-images="~/assets/projects/project-slide.jpg">
+
+                <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
+
+                <div class="hover-mask">
+                    <h2 class="project-title">Chat UI Concept</h2><!--Project Title -->
+                    <p>google.com</p><!--Project Subtitle -->
+                </div>
+
+                <!--==== Project Preview HTML ====-->
+
+                <div class="sr-only project-description">
+                    <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <p>Nam eget urna pellentesque nisl ultrices dapibus. Mauris accumsan vehicula nisl, sed tempus mauris facilisis eu. Donec a iaculis nisi, quis malesuada justo. Pellentesque ut enim sit amet ipsum dignissim egestas. Morbi tincidunt rhoncus urna eget placerat.</p>
+                </div>
+
+            </a><!--End Project Item -->
+
+            <a class="project-item icons" href="#somelink" data-images="~/assets/projects/project-slide.jpg">
+
+                <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
+
+                <div class="hover-mask">
+                    <h2 class="project-title">Login Web Buttons</h2><!--Project Title -->
+                    <p>microsoft.com</p><!--Project Subtitle -->
+                </div>
+
+                <!--==== Project Preview HTML ====-->
+
+                <div class="sr-only project-description">
+                    <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu. Nam eget urna pellentesque nisl ultrices dapibus. Mauris accumsan vehicula nisl, sed tempus mauris facilisis eu. Donec a iaculis nisi, quis malesuada justo. Pellentesque ut enim sit amet ipsum dignissim egestas. Morbi tincidunt rhoncus urna eget placerat.</p>
+                </div>
+
+            </a><!--End Project Item -->
+
+            <a class="project-item web-design" href="#somelink" data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg">
+
+                <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
+
+                <div class="hover-mask">
+                    <h2 class="project-title">LimeLight</h2><!--Project Title -->
+                    <p>amazon.com</p><!--Project Subtitle -->
+                </div>
+
+                <!--==== Project Preview HTML ====-->
+
+                <div class="sr-only project-description">
+                    <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                </div>
+
+            </a><!--End Project Item -->
+
+            <a class="project-item web-design" href="http://www.google.com" data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg">
+
+                <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
+
+                <div class="hover-mask">
+                    <h2 class="project-title">Organic</h2><!--Project Title -->
+                    <p>google.com</p><!--Project Subtitle -->
+                </div>
+
+                <!--==== Project Preview HTML ====-->
+
+                <div class="sr-only project-description">
+                    <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <p>Nam eget urna pellentesque nisl ultrices dapibus. Mauris accumsan vehicula nisl, sed tempus mauris facilisis eu. Donec a iaculis nisi, quis malesuada justo. Pellentesque ut enim sit amet ipsum dignissim egestas. Morbi tincidunt rhoncus urna eget placerat.</p>
+                </div>
+
+            </a><!--End Project Item -->
+
+            <a class="project-item icons" href="#somelink" data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg">
+
+                <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
+
+                <div class="hover-mask">
+                    <h2 class="project-title">Social Media Icons</h2><!--Project Title -->
+                    <p>microsoft.com</p><!--Project Subtitle -->
+                </div>
+
+                <!--==== Project Preview HTML ====-->
+
+                <div class="sr-only project-description">
+                    <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu. Nam eget urna pellentesque nisl ultrices dapibus. Mauris accumsan vehicula nisl, sed tempus mauris facilisis eu. Donec a iaculis nisi, quis malesuada justo. Pellentesque ut enim sit amet ipsum dignissim egestas. Morbi tincidunt rhoncus urna eget placerat.</p>
+                </div>
+
+            </a><!--End Project Item -->
+
+            <a class="project-item web-design" href="#somelink" data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg">
+
+                <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
+
+                <div class="hover-mask">
+                    <h2 class="project-title">Explore</h2><!--Project Title -->
+                    <p>amazon.com</p><!--Project Subtitle -->
+                </div>
+
+                <!--==== Project Preview HTML ====-->
+
+                <div class="sr-only project-description">
+                    <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                    <img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                </div>
+
+            </a><!--End Project Item -->
+
+        </div><!-- End projects -->
+
+    </div><!-- End container -->
+    <!-- ==============================================
+    PROJECT PREVIEW MODAL
+    =============================================== -->
+    <div id="project-modal" class="modal fade">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="left-col">
+                        <img class="img-responsive" src="~/assets/imac.png" alt="">
+                        <div class="loader"></div>
+                        <div class="image-wrapper"></div>
+                    </div>
+
+                    <h1></h1>
+
+                    <div class="project-descr"></div>
+
+                    <div class="clearfix"></div>
+
+                    <p class="text-center"><a class="btn btn-theme"><i class="fa fa-external-link"></i>Visit Website</a></p>
+
+                </div><!-- End modal-body -->
+
+            </div><!-- End modal-content -->
+
+        </div><!-- End modal-dialog -->
+
+    </div><!-- End modal -->
+
+</section>

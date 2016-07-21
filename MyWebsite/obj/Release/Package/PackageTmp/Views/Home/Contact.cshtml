@@ -1,17 +1,67 @@
-﻿@{
-    ViewBag.Title = "Contact";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿<!-- ==============================================
+   CONTACT
+   =============================================== -->
+<section id="contact">
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+    <div class="container">
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+        <h1 class="section-title scrollimation scale-in">Keep in <span>Touch</span> with me</h1>
+
+        <div class="row">
+
+            <div class="col-sm-5 contact-info scrollimation fade-right">
+
+                <p>If you are intrigued by what you've seen and would like to know more, or talk  to me about an ongoing or future projects, you can always reaach me at any of the following below.</p>
+
+                <address>
+                    Olu Osajere<br>
+                    8430 University Executive Park Dr<br>
+                    Charlotte, NC 28262<br>
+                    (123) 456 - 7890
+                </address>
+
+                <ul class="socials">
+                    @*<li><a href="#twitter-link"><i class="fa fa-twitter"></i></a></li>*@
+                    @*<li><a href="#facebook-link"><i class="fa fa-facebook"></i></a></li>*@
+                    <li><a href="https://github.com/oluson"><i class="fa fa-github"></i></a></li>
+                    @*<li><a href="#gplus-link"><i class="fa fa-google-plus"></i></a></li>*@
+                </ul>
+
+            </div>
+
+            <form id="contact-form" class="col-sm-7 scrollimation fade-left" action="contact.php" method="post" novalidate>
+
+                <div class="form-group">
+                    <label class="control-label" for="contact-name">Name</label>
+                    <div class="controls">
+                        <i class="fa fa-user"></i>
+                        <input id="contact-name" name="contactName" placeholder="My name is..." class="form-control input-lg requiredField" type="text" data-error-empty="Please enter your name">
+                    </div>
+                </div><!-- End name input -->
+
+                <div class="form-group">
+                    <label class="control-label" for="contact-mail">Email</label>
+                    <div class="controls">
+                        <i class="fa fa-envelope"></i>
+                        <input id="contact-mail" name="email" placeholder="Please respond at..." class="form-control input-lg requiredField" type="email" data-error-empty="Please enter your email" data-error-invalid="Invalid email address">
+                    </div>
+                </div><!-- End email input -->
+
+                <div class="form-group">
+                    <label class="control-label" for="contact-message">Message</label>
+                    <div class="controls">
+                        <i class="fa fa-comment"></i>
+                        <textarea id="contact-message" name="comments" placeholder="I'd like to talk about..." class="form-control input-lg requiredField" rows="5" data-error-empty="Please enter your message"></textarea>
+                    </div>
+                </div><!-- End textarea -->
+
+                <p><button name="submit" type="submit" class="btn btn-theme btn-lg" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="fa fa-paper-plane"></i>Send Message</button></p>
+                <input type="hidden" name="submitted" id="submitted" value="true" />
+
+            </form><!-- End contact-form -->
+
+        </div><!-- End row -->
+
+    </div><!-- End container -->
+
+</section><!-- End contact section -->
