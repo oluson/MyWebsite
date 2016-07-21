@@ -83,7 +83,12 @@
                     <li>
                         <a href="@Url.Action("Contact","Home")">Contact</a>
                     </li>
+                    <li>
+                        <a href="@Url.Action("Blog","Home")">Blog</a>
+                    </li>
+                @Html.Partial("_LoginPartial")
                 </ul>
+
             </div><!--End navbar-collapse -->
 
         </div><!--End container -->
@@ -138,6 +143,7 @@
     <script src="~/js/jquery.backstretch.min.js"></script>
     <script src="~/js/contact.js"></script>
     <script src="~/js/designr.js"></script>
+    @RenderSection("scripts", required: false)
 </body>
 
 </html>

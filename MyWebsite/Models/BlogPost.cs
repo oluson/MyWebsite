@@ -7,7 +7,10 @@ namespace MyWebsite.Models
 {
     public class BlogPost
     {
-        public BlogPost() { this.Comments = new HashSet<Comment>(); }
+        public BlogPost()
+        {
+            this.Comments = new HashSet<Comment>();
+    }
         public int Id { get; set; }
         public DateTimeOffset Created { get; set; }
         public DateTimeOffset? Updated { get; set; }
