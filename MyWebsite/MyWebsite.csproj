@@ -216,7 +216,6 @@
     <Content Include="assets\apple-touch-icon-72x72.png" />
     <Content Include="assets\apple-touch-icon.png" />
     <Content Include="assets\Cartoon.jpg" />
-    <Content Include="assets\contact-bg1.jpg" />
     <Content Include="assets\favicon.ico" />
     <Content Include="assets\favicon.png" />
     <Content Include="assets\header-bg.jpg" />
