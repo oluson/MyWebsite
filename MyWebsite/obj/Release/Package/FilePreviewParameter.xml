@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="oluson" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^c:\\users\\oosaj\\documents\\visual\ studio\ 2015\\Projects\\MyWebsite\\MyWebsite\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^c:\\users\\oosaj\\documents\\visual\ studio\ 2015\\Projects\\MyWebsite\\MyWebsite\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=coderfoundry.cloudapp.net,55555;&#xD;&#xA;         &#xD;&#xA;         Initial Catalog=oosajere-portfolio;&#xD;&#xA;         User Id=oosajere;&#xD;&#xA;         Password=Wilson#123" tags="">
+    <parameterEntry kind="XmlFile" scope="c:\\users\\oosaj\\documents\\visual\ studio\ 2015\\Projects\\MyWebsite\\MyWebsite\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>
