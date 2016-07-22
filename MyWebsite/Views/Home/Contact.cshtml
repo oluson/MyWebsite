@@ -3,10 +3,14 @@
    =============================================== -->
 <section id="portfolio">
 
-    <div id="portfolio-header" class="" style="background-color:black">
+    <div id="portfolio-header" class="text-center" style="background-color:black">
 
         <h1 class="section-title scrollimation scale-in">Keep in <span>Touch</span> with me</h1>
-    </div>
+
+        </div>
+            
+     <div  @*id ="contact"*@ class="container">
+
         <div class="row">
 
             <div class="col-sm-5 contact-info scrollimation fade-right">
@@ -29,38 +33,39 @@
 
             </div>
 
-            <form id="contact-form" class="col-sm-7 scrollimation fade-left" action="contact.php" method="post" novalidate>
 
-                <div class="form-group">
-                    <label class="control-label" for="contact-name">Name</label>
-                    <div class="controls">
-                        <i class="fa fa-user"></i>
-                        <input id="contact-name" name="contactName" placeholder="My name is..." class="form-control input-lg requiredField" type="text" data-error-empty="Please enter your name">
-                    </div>
-                </div><!-- End name input -->
+        <form id="contact-form" class="col-sm-7 scrollimation fade-left" action="contact.php" method="post" novalidate>
 
-                <div class="form-group">
-                    <label class="control-label" for="contact-mail">Email</label>
-                    <div class="controls">
-                        <i class="fa fa-envelope"></i>
-                        <input id="contact-mail" name="email" placeholder="Please respond at..." class="form-control input-lg requiredField" type="email" data-error-empty="Please enter your email" data-error-invalid="Invalid email address">
-                    </div>
-                </div><!-- End email input -->
+            <div class="form-group">
+                <label class="control-label" for="contact-name">Name</label>
+                <div class="controls">
+                    <i class="fa fa-user"></i>
+                    <input id="contact-name" name="contactName" placeholder="My name is..." class="form-control input-lg requiredField" type="text" data-error-empty="Please enter your name">
+                </div>
+            </div><!-- End name input -->
 
-                <div class="form-group">
-                    <label class="control-label" for="contact-message">Message</label>
-                    <div class="controls">
-                        <i class="fa fa-comment"></i>
-                        <textarea id="contact-message" name="comments" placeholder="I'd like to talk about..." class="form-control input-lg requiredField" rows="5" data-error-empty="Please enter your message"></textarea>
-                    </div>
-                </div><!-- End textarea -->
+            <div class="form-group">
+                <label class="control-label" for="contact-mail">Email</label>
+                <div class="controls">
+                    <i class="fa fa-envelope"></i>
+                    <input id="contact-mail" name="email" placeholder="Please respond at..." class="form-control input-lg requiredField" type="email" data-error-empty="Please enter your email" data-error-invalid="Invalid email address">
+                </div>
+            </div><!-- End email input -->
 
-                <p><button name="submit" type="submit" class="btn btn-theme btn-lg" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="fa fa-paper-plane"></i>Send Message</button></p>
-                <input type="hidden" name="submitted" id="submitted" value="true" />
+            <div class="form-group">
+                <label class="control-label" for="contact-message">Message</label>
+                <div class="controls">
+                    <i class="fa fa-comment"></i>
+                    <textarea id="contact-message" name="comments" placeholder="I'd like to talk about..." class="form-control input-lg requiredField" rows="5" data-error-empty="Please enter your message"></textarea>
+                </div>
+            </div><!-- End textarea -->
 
-            </form><!-- End contact-form -->
+            <p><button name="submit" type="submit" class="btn btn-theme btn-lg" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="fa fa-paper-plane"></i>Send Message</button></p>
+            <input type="hidden" name="submitted" id="submitted" value="true" />
 
-        </div><!-- End row -->
+        </form><!-- End contact-form -->
+
+    </div><!-- End row -->
 
     </div><!-- End container -->
 
