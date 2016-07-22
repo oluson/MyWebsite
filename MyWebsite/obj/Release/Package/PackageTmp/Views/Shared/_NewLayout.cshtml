@@ -51,7 +51,7 @@
     MAIN NAV
     =============================================== -->
     <div id="main-nav" class="navbar navbar-fixed-top">
-        <div id="olu" class="container">
+        <div class="container">
 
             <div class="navbar-header">
 
@@ -83,7 +83,13 @@
                     <li>
                         <a href="@Url.Action("Contact","Home")">Contact</a>
                     </li>
+                    <li>
+                        <a href="@Url.Action("Blog","Home")">Blog</a>
+                    </li>
+                    
+             
                 </ul>
+
             </div><!--End navbar-collapse -->
 
         </div><!--End container -->
@@ -138,6 +144,7 @@
     <script src="~/js/jquery.backstretch.min.js"></script>
     <script src="~/js/contact.js"></script>
     <script src="~/js/designr.js"></script>
+    @RenderSection("scripts", required: false)
 </body>
 
 </html>

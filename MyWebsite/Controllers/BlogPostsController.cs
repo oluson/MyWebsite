@@ -15,7 +15,6 @@ namespace MyWebsite.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: BlogPosts
-        
         public ActionResult Index()
         {
             return View(db.Posts.ToList());

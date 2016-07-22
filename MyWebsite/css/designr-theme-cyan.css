@@ -22,9 +22,9 @@
     font:0/0 a;
 }
 
-#site-nav{
+/*#site-nav{
     background-color: #9fb8e0;
-}
+}*/
 
 .navbar {
     margin:0;
@@ -425,6 +425,7 @@ header.jumbotron{
 /*------------------------
 -----Services Styles------
 ------------------------*/
+
 
 #services{
     background:#fff;
