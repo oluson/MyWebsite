@@ -84,7 +84,7 @@
                         <a href="@Url.Action("Contact","Home")">Contact</a>
                     </li>
                     <li>
-                        <a href="@Url.Action("Blog","Home")">Blog</a>
+                        <a href="@Url.Action("Index","BlogPosts")">Blog</a>
                     </li>
                     
              
@@ -110,10 +110,12 @@
                 <div class="col-sm-6 left-col">
                     <h1 class="small-logo">Olu Osajere<br><span>Software Developer</span></h1>
                     <ul class="footer-nav">
-                        <li><a class="scrollto" href="@Url.Action("Index","Home")">Home</a></li>
-                        <li><a class="scrollto" href="@Url.Action("Resume","Home")">Resume</a></li>
-                        <li><a class="scrollto" href="@Url.Action("Portfolio","Home")">Portfolio</a></li>
-                        <li><a class="scrollto" href="@Url.Action("Contact","Home")">Contact</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Home</a></li>
+                        <li><a href="@Url.Action("Resume","Home")">Resume</a></li>
+                        <li><a href="@Url.Action("Portfolio","Home")">Portfolio</a></li>
+                        <li><a href="@Url.Action("Contact","Home")">Contact</a></li>
+                        <li><a href="@Url.Action("Index","BlogPosts")">Blog</a></li>
+                        @Html.Partial("_LoginPartial")
                     </ul>
                     <p>&copy;Copyright 2016 / All Rights Reserved</p>
                 </div>

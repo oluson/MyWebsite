@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -12,7 +13,9 @@ namespace MyWebsite.Models
             this.Comments = new HashSet<Comment>();
     }
         public int Id { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         public DateTimeOffset Created { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         public DateTimeOffset? Updated { get; set; }
         public string Title { get; set; }
         public string Slug { get; set; }
