@@ -111,7 +111,7 @@
                 <hgroup class="pull-left">
                     <h1 class="site-title">
                         <a rel="home" title="Oluson" href="@Url.Action("Index","Home")"
-                            <i class="fa fa-lemon-o"></i> Oluson
+                            <i class="fa fa-compass"></i> Oluson
                         </a>
                     </h1>
                 </hgroup>
@@ -132,7 +132,7 @@
                         @*<img class="entry-avatar" alt="Paul Laros" height="52" width="52" src="http://www.gravatar.com/avatar/ea67e860739cd91fe40b6797e97e6820.jpg?s=52">*@
                         <h2 class="entry-title"><a href="@Url.Action("Details",new { id = item.Id })">@Html.DisplayFor(modelItem => item.Title)</a></h2>
                         <p class="entry-meta">
-                            Posted on <a class="entry-date" href="date.html">@Html.DisplayFor(modelItem => item.Created)</a> | By <a class="entry-author" href="@Url.Action("About","Home")">Olu Osajere</a> | Tags <a class="label label-danger" href="tag.html">Oluson</a>
+                            Posted on <a class="entry-date" href="date.html">@Html.DisplayFor(modelItem => item.Created)</a> | By <a class="entry-author" href="@Url.Action("About","Home")">Olu Osajere</a> | Tags <a class="label label-danger" href="@Url.Action("Index","Home")">Oluson</a>
                         </p>
                     </header>
                     <div class="entry-description">

@@ -18,7 +18,7 @@ namespace MyWebsite.Controllers
         public ActionResult Index()
         {
             // return View(db.Posts.ToList());
-            return View(db.Posts.OrderByDescending(m => m.Created).ToList());
+            return View(db.Posts.OrderByDescending(m => m.Created).ToList()); //This places the latest post first
         }
 
         // GET: BlogPosts/Details/5
@@ -37,7 +37,7 @@ namespace MyWebsite.Controllers
         }
 
         // GET: BlogPosts/Create
-        [Authorize (Roles="Admin")]   //This has to be directly above
+        [Authorize (Roles="Admin")]   //This has to be directly above 
         public ActionResult Create()
         {
             return View();
