@@ -44,17 +44,17 @@
 
             <div class="about">
                 <h4>About us</h4>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p></p>
             </div>
 
             <div class="tags">
                 <h4>Tags</h4>
                 <ul>
                     <li>
-                        <a href="tag.html" class="label label-danger">CSS3</a>
+                        <a href="@Url.Action("Index","Home")" class="label label-danger">Oluson</a>
                     </li>
                     <li>
-                        <a href="tag.html" class="label label-primary">HTML5</a>
+                        <a href="@Url.Action("About","Home")" class="label label-primary">Oluson</a>
                     </li>
                 </ul>
             </div>
@@ -137,7 +137,7 @@
                     </header>
                     <div class="entry-description">
                         <p>
-                            @Html.DisplayFor(modelItem => item.Body)
+                            @Html.Raw(Server.HtmlDecode(item.Body))
                         </p>
                     </div>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

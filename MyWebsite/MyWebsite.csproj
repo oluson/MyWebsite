@@ -266,7 +266,6 @@
     <Content Include="Grape\index.html" />
     <Content Include="Grape\js\bootstrap.js" />
     <Content Include="Grape\js\bootstrap.min.js" />
-    <Content Include="Grape\js\ckeditor.js" />
     <Content Include="Grape\js\custom.js" />
     <Content Include="Grape\js\jquery-1.11.0.min.js" />
     <Content Include="Grape\js\pace.min.js" />

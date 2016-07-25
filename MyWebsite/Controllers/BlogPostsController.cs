@@ -37,7 +37,7 @@ namespace MyWebsite.Controllers
         }
 
         // GET: BlogPosts/Create
-        [Authorize (Roles="Admin")]   //This has to be directly above 
+        [Authorize (Roles="Admin")]   //This has to be directly above to require admin role to create
         public ActionResult Create()
         {
             return View();
@@ -61,6 +61,7 @@ namespace MyWebsite.Controllers
         }
 
         // GET: BlogPosts/Edit/5
+        [Authorize(Roles = "Admin")] //This has to be directly above to require admin role to create
         public ActionResult Edit(int? id)
         {
             if (id == null)
