@@ -124,10 +124,11 @@
             <div ></div>
             </header> <!-- /header -->
 
-
+    @if (User.IsInRole("Admin")) {
             <p>
                 @Html.ActionLink("Create New", "Create")
             </p>
+    }
 
             <div style="float:right">
 

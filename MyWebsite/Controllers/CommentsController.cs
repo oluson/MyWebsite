@@ -17,11 +17,11 @@ namespace MyWebsite.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Comments
-        public ActionResult Index()
-        {
-            var comments = db.Comments.Include(c => c.Author).Include(c => c.Post);
-            return View(comments.ToList());
-        }
+        //public ActionResult Index()
+        //{
+        //    var comments = db.Comments.Include(c => c.Author).Include(c => c.Post);
+          //return View(comments.ToList());
+        //}
 
         // GET: Comments/Details/5
         public ActionResult Details(int? id)
@@ -52,10 +52,11 @@ namespace MyWebsite.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Create([Bind(Include = "Id,PostId,Body,slug")] Comment comment)
+        public ActionResult Create([Bind(Include = "Id,PostId,Body")] Comment comment)
         {
             if (ModelState.IsValid)
             {
+                comment.Author = db.Users.Find(User.Identity.GetUserId());
                 comment.AuthorId = User.Identity.GetUserId();
                 comment.Body = Request.Params["comments"];
                 comment.Created = DateTimeOffset.Now;
@@ -93,10 +94,11 @@ namespace MyWebsite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Body,UpdateReason")] Comment comment)
+        public ActionResult Edit([Bind(Include = "Id,PostId,Body,Created,UpdateReason,AuthorId")] Comment comment)
         {
             if (ModelState.IsValid)
             {
+                comment.Updated = DateTimeOffset.Now;
                 db.Entry(comment).State = EntityState.Modified;
                 db.SaveChanges();
                 BlogPosts blogPost = db.Posts.FirstOrDefault(p => p.Id == comment.PostId);
