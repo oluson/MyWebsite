@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace MyWebsite.Models
 {
@@ -36,7 +37,8 @@ namespace MyWebsite.Models
         {
             return new ApplicationDbContext();
         }
-        public DbSet<BlogPost> Posts { get; set; }
+        public DbSet<BlogPosts> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }
+
     }
 }

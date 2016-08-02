@@ -6,11 +6,17 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using MyWebsite.Models;
+using System.Net.NetworkInformation;
+using Owin.Security.Providers.LinkedIn;
+
 
 namespace MyWebsite
 {
     public partial class Startup
     {
+        public string ClientId { get; private set; }
+        public string ClientSecret { get; private set; }
+
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
         {
@@ -54,15 +60,20 @@ namespace MyWebsite
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+              appId: "571253506416731",
+               appSecret: "553afbda41db8eea7c21b77c116f8514");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+               ClientId = "411540401860-dd7ruj0cc320dcjcv3ulrqlvah1ukhkg.apps.googleusercontent.com",
+                ClientSecret = "KKEaJdYZCxKPiMfspjSkq4ND"
+            });
+
+            app.UseLinkedInAuthentication("77ppitxcc9t30q", "fRRcl1He5YTGfotA");
+
+
+
         }
     }
 }

@@ -1,0 +1,100 @@
+﻿@model IEnumerable<MyWebsite.Models.Comment>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Olu Osajere">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>Olu Osajere-Oluson Blog</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C400italic%2C700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Grape/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Grape/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Grape/css/bootstrap-social.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="~/Grape/css/main.css" rel="stylesheet">
+
+    <!-- Loading bar -->
+    <script src="~/Grape/js/pace.min.js"></script>
+
+    <!-- HTML5 shiv for IE8 support -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <body>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Author.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Post.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Body)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Created)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Updated)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UpdateReason)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Author.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Post.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Body)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Created)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Updated)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UpdateReason)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        <!-- Scripts -->
+        <script src="~/Grape/js/jquery-1.11.0.min.js"></script>
+        <script src="~/Grape/js/custom.js"></script>
+
+    </body>
+</html>

@@ -7,9 +7,9 @@ using System.Web.Mvc;
 
 namespace MyWebsite.Models
 {
-    public class BlogPost
+    public class BlogPosts
     {
-        public BlogPost()
+        public BlogPosts()
         {
             this.Comments = new HashSet<Comment>();
     }

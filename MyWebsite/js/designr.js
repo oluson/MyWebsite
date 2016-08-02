@@ -233,9 +233,9 @@ $(document).ready(function() {
 	/*============================================
 	Backstretch Images
 	==============================================*/
-	$.backstretch('/assets/header-bg.jpg');
+	$.backstretch('../assets/header-bg.jpg');
 
-	$('body').append('<img class="preload-image" src="/assets/contact-bg.jpg"style="display:none;"/>');
+	$('body').append('<img class="preload-image" src="../assets/contact-bg.jpg" style="display:none;"/>');
 
 	$('#about').waypoint(function(direction){
 	
@@ -244,9 +244,9 @@ $(document).ready(function() {
 		$('.backstretch').remove();
 	
 		if (direction=='down'){
-			$.backstretch('/assets/contact-bg.jpg');
+			$.backstretch('../assets/contact-bg.jpg');
 		}else{
-			$.backstretch('/assets/header-bg.jpg');
+			$.backstretch('../assets/header-bg.jpg');
 		}
 	});
 	
