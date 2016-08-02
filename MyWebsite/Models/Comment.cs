@@ -11,9 +11,9 @@ namespace MyWebsite.Models
         public string AuthorId { get; set; }
         [AllowHtml]
         public string Body { get; set; }
-
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         public DateTimeOffset Created { get; set; }
-       
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         public DateTimeOffset? Updated { get; set; }
         public string UpdateReason { get; set; }
         public virtual ApplicationUser Author { get; set; }

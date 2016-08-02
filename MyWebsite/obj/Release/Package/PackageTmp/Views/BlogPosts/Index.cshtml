@@ -4,7 +4,7 @@
 @model IPagedList<MyWebsite.Models.BlogPosts>
 
 @{
-   Layout = null;
+Layout = null;
 }
 
 <!DOCTYPE html>
@@ -124,10 +124,11 @@
             <div ></div>
             </header> <!-- /header -->
 
-
+    @if (User.IsInRole("Admin")) {
             <p>
                 @Html.ActionLink("Create New", "Create")
             </p>
+    }
 
             <div style="float:right">
 
@@ -156,7 +157,7 @@
                         </p>
                     </div>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { slug = item.Slug }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 </section> 
             }

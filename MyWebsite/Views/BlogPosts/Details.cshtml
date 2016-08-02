@@ -87,14 +87,14 @@
             position: relative;
         }*/
 
-            .comments:before,
+            /*.comments:before,
             .comment:before,
             .comment .text:before {
                 content: "";
                 position: absolute;
                 top: 0;
                 left: 65px;
-            }
+            }*/
 
 
             .comment:before {
@@ -298,7 +298,7 @@
                                 @Html.Raw(Server.HtmlDecode(item.Body))
                                 
                             </div>
-                            <p class="attribution">by <a href="#non">@item.Author.Email</a> <p>at</p> @item.Created</p>
+                            <p class="attribution">by <a href="#non"> @item.Author.Email </a> at @item.Created.ToString("hh:mm tt dd MM yyyy")</p>
                             <p>
                                 @if (User.IsInRole("Moderator") || User.IsInRole("Admin") || User.Identity.GetUserId()==(item.AuthorId))
                                 {
