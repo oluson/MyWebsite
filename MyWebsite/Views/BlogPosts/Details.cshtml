@@ -2,7 +2,7 @@
 @using Microsoft.AspNet.Identity;
 
 @{
-    Layout = null;
+Layout = null;
 
 }
 
@@ -40,6 +40,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
     <style>
+
         .comment {
             overflow: hidden;
             padding: 0 0 1em;
@@ -289,9 +290,9 @@
             {
                 <section class="comments">
                     <article class="comment">
-                        @*<a class="comment-img" href="#non">
+                        <a class="comment-img" href="#non">
                                 <img src="http://lorempixum.com/50/50/people/1" alt="" width="50" height="50">
-                            </a>*@
+                            </a>
                         <div class="comment-body">
                             <div class="text">
                                 
@@ -392,13 +393,13 @@
 
         <script>tinymce.init({ selector: 'textarea' });</script>
 
-        <script src="~/js/jquery.dotdotdot.min.js"></script> 
+        @*<script src="~/js/jquery.dotdotdot.min.js"></script> 
 
         <script>
             $(document).ready(function () {
-                $(".comments").dotdotdot({ height: 100 });
+                $(".comment").dotdotdot({ height: 100 });
              });
-        </script>
+        </script>*@
     
 
 
