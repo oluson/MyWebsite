@@ -477,6 +477,7 @@
     <Content Include="Grape\js\bootstrap.min.js" />
     <Content Include="Grape\js\custom.js" />
     <Content Include="Grape\js\jquery-1.11.0.min.js" />
+    <Content Include="js\jquery.dotdotdot.min.js" />
     <Content Include="Grape\js\pace.min.js" />
     <Content Include="Grape\js\tinymce.min.js" />
     <Content Include="Grape\Portfolio.jpg" />
