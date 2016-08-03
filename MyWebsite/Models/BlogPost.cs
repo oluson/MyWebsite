@@ -26,5 +26,19 @@ namespace MyWebsite.Models
         public bool Published { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }
+
+        //Post limit
+
+        private int BodyLimit = 200;
+        public string BodyTrimmed
+        {
+            get
+            {
+                if (this.Body.Length > this.BodyLimit)
+                    return this.Body.Substring(0, this.BodyLimit) + " " + "...";
+                else
+                    return this.Body;
+            }
+        }
     }
 }

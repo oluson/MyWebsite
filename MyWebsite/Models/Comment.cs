@@ -18,6 +18,20 @@ namespace MyWebsite.Models
         public string UpdateReason { get; set; }
         public virtual ApplicationUser Author { get; set; }
         public virtual BlogPosts Post { get; set; }
-    
-} 
+
+        //Post limit
+
+        private int BodyLimit = 200;
+        public string BodyTrimmed
+        {
+            get
+            {
+                if (this.Body.Length > this.BodyLimit)
+                    return this.Body.Substring(0, this.BodyLimit) + " " + "...";
+                else
+                    return this.Body;
+            }
+        }
+
+    } 
     }
