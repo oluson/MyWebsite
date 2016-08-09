@@ -14,7 +14,7 @@ namespace MyWebsite.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string DisplayName { get; set; }
-        public string Email { get; set; }
+        //public string Email { get; set; }
         public ApplicationUser() { this.BlogComments = new HashSet<Comment>(); }
         public virtual ICollection<Comment> BlogComments { get; set; }
 

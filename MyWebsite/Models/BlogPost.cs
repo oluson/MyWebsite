@@ -27,7 +27,9 @@ namespace MyWebsite.Models
 
         public virtual ICollection<Comment> Comments { get; set; }
 
-        //Post limit
+
+
+        //Post limit (call this method in the view)
 
         private int BodyLimit = 200;
         public string BodyTrimmed
