@@ -1158,7 +1158,7 @@ header.jumbotron{
 }
 
 
-#contact-form .form-group label{
+ #contact-form .form-group label{
     display:none;
     font-size:18px;
     line-height:24px;
@@ -1204,11 +1204,11 @@ header.jumbotron{
 
 }
 
-#contact-form.no-placeholder .form-group [class*="fa"]{
+ #contact-form.no-placeholder .form-group [class*="fa"]{
     top:30px;
 }
 
-#contact-form textarea.form-control {
+ #contact-form textarea.form-control {
     height:auto;
 	max-width:100%;
 	min-width:100%;
@@ -1217,7 +1217,7 @@ header.jumbotron{
 	padding-top:14px;
 }
 
-#contact-form .form-control:focus {
+ #contact-form .form-control:focus {
     border:none;
     outline:none;
     box-shadow:none;

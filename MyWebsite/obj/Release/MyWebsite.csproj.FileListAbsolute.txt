@@ -146,3 +146,8 @@ C:\Users\oosaj\Documents\Visual Studio 2015\Projects\MyWebsite\MyWebsite\bin\Pag
 C:\Users\oosaj\Documents\Visual Studio 2015\Projects\MyWebsite\MyWebsite\bin\PagedList.Mvc.dll
 C:\Users\oosaj\Documents\Visual Studio 2015\Projects\MyWebsite\MyWebsite\bin\PagedList.xml
 C:\Users\oosaj\Documents\Visual Studio 2015\Projects\MyWebsite\MyWebsite\bin\PagedList.Mvc.xml
+C:\Users\oosaj\Documents\Visual Studio 2015\Projects\MyWebsite\MyWebsite\bin\SendGrid.dll
+C:\Users\oosaj\Documents\Visual Studio 2015\Projects\MyWebsite\MyWebsite\bin\SendGrid.SmtpApi.dll
+C:\Users\oosaj\Documents\Visual Studio 2015\Projects\MyWebsite\MyWebsite\bin\SendGridMail.dll
+C:\Users\oosaj\Documents\Visual Studio 2015\Projects\MyWebsite\MyWebsite\bin\System.Net.Http.Formatting.dll
+C:\Users\oosaj\Documents\Visual Studio 2015\Projects\MyWebsite\MyWebsite\bin\System.Net.Http.Formatting.xml

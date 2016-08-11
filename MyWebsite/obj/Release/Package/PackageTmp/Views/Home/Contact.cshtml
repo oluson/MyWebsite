@@ -35,15 +35,17 @@
                 </ul>
 
             </div>
-         <div color:black>
+         <div>
 
-        <form id="contact-form" class="col-sm-7 scrollimation fade-left" action="contact.php" method="post" novalidate>
-
+        @*<form id="contact-form" class="col-sm-7 scrollimation fade-left" action="" method="post" novalidate>*@
+             @using (Html.BeginForm("Contact","Home", FormMethod.Post, htmlAttributes: new {  @class = "col-sm-7 scrollimation fade-left",  id= "contact-form"}))
+             {
+                 @Html.AntiForgeryToken()
             <div class="form-group">
                 <label class="control-label" for="contact-name">Name</label>
                 <div class="controls">
                     <i class="fa fa-user"></i>
-                    <input id="contact-name" name="contactName" placeholder="My name is..." class="form-control input-lg requiredField" type="text" data-error-empty="Please enter your name">
+                    <input id="contact-name" name="Name" placeholder="My name is..." class="form-control input-lg requiredField" type="text" data-error-empty="Please enter your name">
                 </div>
             </div><!-- End name input -->
 
@@ -59,14 +61,14 @@
                 <label class="control-label" for="contact-message">Message</label>
                 <div class="controls">
                     <i class="fa fa-comment"></i>
-                    <textarea id="contact-message" name="comments" placeholder="I'd like to talk about..." class="form-control input-lg requiredField" rows="5" data-error-empty="Please enter your message"></textarea>
+                    <textarea id="contact-message" name="Message" placeholder="I'd like to talk about..." class="form-control input-lg requiredField" rows="5" data-error-empty="Please enter your message"></textarea>
                 </div>
             </div><!-- End textarea -->
 
             <p><button name="submit" type="submit" class="btn btn-theme btn-lg" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="fa fa-paper-plane"></i>Send Message</button></p>
             <input type="hidden" name="submitted" id="submitted" value="true" />
+             }
 
-        </form><!-- End contact-form -->
 
     </div><!-- End row -->
 
