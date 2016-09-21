@@ -450,6 +450,12 @@
     <Content Include="assets\contact-bg.jpg" />
     <Content Include="assets\portfolio1.jpg" />
     <Content Include="assets\preloader.gif" />
+    <Content Include="assets\projects\bt-screenshot.jpg" />
+    <Content Include="assets\projects\bt-screenshot2.jpg" />
+    <Content Include="assets\projects\Btslide-1.png" />
+    <Content Include="assets\projects\Btslide.png" />
+    <Content Include="assets\projects\Bugtracker-2.png" />
+    <Content Include="assets\projects\Bugtracker.png" />
     <Content Include="assets\projects\company-logo.png" />
     <Content Include="assets\projects\js.png" />
     <Content Include="assets\projects\project-slide.jpg" />
