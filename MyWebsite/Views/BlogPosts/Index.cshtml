@@ -42,179 +42,198 @@
 
 <body>
 
-    <div id="secondary" class="col-sm-3 sidebar" style="display: none;">
-        <aside>
 
-            <div class="about">
-                <h4>About us</h4>
-                <p></p>
-            </div>
+    <section id="portfolio">
 
-            <div class="tags">
-                <h4>Tags</h4>
-                <ul>
-                    <li>
-                        <a href="@Url.Action("Index","Home")" class="label label-danger">Oluson</a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("About","Home")" class="label label-primary">Oluson</a>
-                    </li>
-                </ul>
-            </div>
+        <div id="portfolio-header" class="text-center" style="background-color:black">
+            <br /><br />
 
-            <div class="socialmedia">
-                <h4>Share</h4>
-                <div class="socials-sidebar">
-                    <a class="btn btn-facebook" href="#" title="Facebook">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a class="btn btn-twitter" href="#" title="Twitter">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a class="btn btn-linkedin" href="#" title="LinkedIn">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                    <a class="btn btn-flickr" href="#" title="Flickr">
-                        <i class="fa fa-flickr"></i>
-                    </a>
-                    <a class="btn btn-pinterest" href="#" title="Pinterest">
-                        <i class="fa fa-pinterest"></i>
-                    </a>
-                    <a class="btn btn-tumblr" href="#" title="Tumblr">
-                        <i class="fa fa-tumblr"></i>
-                    </a>
-                    <a class="btn btn-dropbox" href="#" title="Dropbox">
-                        <i class="fa fa-dropbox"></i>
-                    </a>
-                    <a class="btn btn-google-plus" href="#" title="Google+">
-                        <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a class="btn btn-instagram" href="#" title="Instagram">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                    <a class="btn btn-github" href="#" title="GitHub">
-                        <i class="fa fa-github"></i>
-                    </a>
-                    <a class="btn btn-bitbucket" href="#" title="Bitbucket">
-                        <i class="fa fa-bitbucket"></i>
-                    </a>
-                    <a class="btn btn-vk" href="#" title="VK">
-                        <i class="fa fa-vk"></i>
-                    </a>
-                </div> <!-- /.socials-sidebar -->
-            </div>
-
-        </aside>
-    </div> <!-- /#secondary -->
-
-    <div id="primary" class="col-sm-12">
-        <div class="content">
-
-            <header class="header">
-                <hgroup class="pull-left">
-                    <h1 class="site-title">
-                        <a rel="home" title="Oluson" href="@Url.Action("Index","Home")">
-                            <i class="fa fa-compass"></i>Oluson Blog
-                        </a>
-                    </h1>
-                </hgroup>
-                <div id="togglesidebar" class="btn btn-primary pull-right">
-                    <i class="fa fa-bars"></i>
-                </div>
-            <div ></div>
-            </header> <!-- /header -->
-
-    @if (User.IsInRole("Admin")) {
-            <p>
-                @Html.ActionLink("Create New", "Create")
-            </p>
-    }
-
-            <div style="float:right">
-
-                @using (Html.BeginForm())
-            {
-                    @Html.TextBox("searchStr")
-                    <input type="submit" />
-                }
-
-            </div><br />
-
-
-                            @foreach(var item in Model)
-            {
-                <section class="post">
-                    <header class="entry-header">
-                        <h2 class="entry-title"><a href="@Url.Action("Details",new {slug = item.Slug})">@item.Title</a> </h2>
-                         
-                        <p class="entry-meta">
-                            Posted on <a class="entry-date" href="date.html">@Html.DisplayFor(modelItem => item.Created)</a> | By <a class="entry-author" href="@Url.Action("About","Home")">Olu Osajere</a> | Tags <a class="label label-danger" href="@Url.Action("Index","Home")">Oluson</a>
-                        </p>
-                    </header>
-                    <div class="entry-description">
-                        <p>
-                            @Html.Raw(Server.HtmlDecode(item.Body))
-                        </p>
-                    </div>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { slug = item.Slug }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </section> 
-            }
-
-
-            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
-            
-            <!-- /.post -->
-
-
-            <footer class="footer">
-                <p>© Oluson 2016. All right reserved.</p>
-                @*<div class="socials-footer">
-                    <a class="btn btn-facebook" href="#" title="Facebook">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a class="btn btn-twitter" href="#" title="Twitter">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a class="btn btn-linkedin" href="#" title="LinkedIn">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                    <a class="btn btn-flickr" href="#" title="Flickr">
-                        <i class="fa fa-flickr"></i>
-                    </a>
-                    <a class="btn btn-pinterest" href="#" title="Pinterest">
-                        <i class="fa fa-pinterest"></i>
-                    </a>
-                    <a class="btn btn-tumblr" href="#" title="Tumblr">
-                        <i class="fa fa-tumblr"></i>
-                    </a>
-                    <a class="btn btn-dropbox" href="#" title="Dropbox">
-                        <i class="fa fa-dropbox"></i>
-                    </a>
-                    <a class="btn btn-google-plus" href="#" title="Google+">
-                        <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a class="btn btn-instagram" href="#" title="Instagram">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                    <a class="btn btn-github" href="#" title="GitHub">
-                        <i class="fa fa-github"></i>
-                    </a>
-                    <a class="btn btn-bitbucket" href="#" title="Bitbucket">
-                        <i class="fa fa-bitbucket"></i>
-                    </a>
-                    <a class="btn btn-vk" href="#" title="VK">
-                        <i class="fa fa-vk"></i>
-                    </a>
-                </div>*@ <!-- /.socials-footer -->
-            </footer> <!-- /footer -->
+            <h1 class="section-title scrollimation scale-in"> <span>Personal Blog</span><i class="fa fa-book"></i></h1><br />
 
         </div>
-    </div> <!-- /#primary -->
-    <!-- Scripts -->
-    <script src="~/Grape/js/jquery-1.11.0.min.js"></script>
-    <script src="~/Grape/js/custom.js"></script>
+    </section>
+
+    <section id="contact">
+
+        <div class="container">
+            </div>
+        </section>
+
+
+            <div id="secondary" class="col-sm-3 sidebar" style="display: none;">
+                <aside>
+
+                    <div class="about">
+                        <h4>About us</h4>
+                        <p></p>
+                    </div>
+
+                    <div class="tags">
+                        <h4>Tags</h4>
+                        <ul>
+                            <li>
+                                <a href="@Url.Action("Index","Home")" class="label label-danger">Oluson</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("About","Home")" class="label label-primary">Oluson</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="socialmedia">
+                        <h4>Share</h4>
+                        <div class="socials-sidebar">
+                            <a class="btn btn-facebook" href="#" title="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="btn btn-twitter" href="#" title="Twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-linkedin" href="#" title="LinkedIn">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a class="btn btn-flickr" href="#" title="Flickr">
+                                <i class="fa fa-flickr"></i>
+                            </a>
+                            <a class="btn btn-pinterest" href="#" title="Pinterest">
+                                <i class="fa fa-pinterest"></i>
+                            </a>
+                            <a class="btn btn-tumblr" href="#" title="Tumblr">
+                                <i class="fa fa-tumblr"></i>
+                            </a>
+                            <a class="btn btn-dropbox" href="#" title="Dropbox">
+                                <i class="fa fa-dropbox"></i>
+                            </a>
+                            <a class="btn btn-google-plus" href="#" title="Google+">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a class="btn btn-instagram" href="#" title="Instagram">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-github" href="#" title="GitHub">
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <a class="btn btn-bitbucket" href="#" title="Bitbucket">
+                                <i class="fa fa-bitbucket"></i>
+                            </a>
+                            <a class="btn btn-vk" href="#" title="VK">
+                                <i class="fa fa-vk"></i>
+                            </a>
+                        </div> <!-- /.socials-sidebar -->
+                    </div>
+
+                </aside>
+            </div> <!-- /#secondary -->
+
+            <div id="primary" class="col-sm-12">
+                <div class="content">
+
+                    <header class="header">
+                        <hgroup class="pull-left">
+                            <h1 class="site-title">
+                                <a rel="home" title="Oluson" href="@Url.Action("Index","Home")">
+                                    <i class="fa fa-compass"></i>My Blog
+                                </a>
+                            </h1>
+                        </hgroup>
+                        <div id="togglesidebar" class="btn btn-primary pull-right">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                        <div></div>
+                    </header> <!-- /header -->
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <p>
+                            @Html.ActionLink("Create New", "Create")
+                        </p>
+                    }
+
+                    <div style="float:right">
+
+                        @using (Html.BeginForm())
+            {
+                            @Html.TextBox("searchStr")
+                            <input type="submit" />
+                        }
+
+                    </div><br />
+
+
+                    @foreach (var item in Model)
+                    {
+                        <section class="post">
+                            <header class="entry-header">
+                                <h2 class="entry-title"><a href="@Url.Action("Details",new {slug = item.Slug})">@item.Title</a> </h2>
+
+                                <p class="entry-meta">
+                                    Posted on <a class="entry-date" href="date.html">@Html.DisplayFor(modelItem => item.Created)</a> | By <a class="entry-author" href="@Url.Action("About","Home")">Olu Osajere</a> | Tags <a class="label label-danger" href="@Url.Action("Index","Home")">Oluson</a>
+                                </p>
+                            </header>
+                            <div class="entry-description">
+                                <p>
+                                    @Html.Raw(Server.HtmlDecode(item.Body))
+                                </p>
+                            </div>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Details", "Details", new { slug = item.Slug }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </section>
+                    }
+
+
+                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+
+                    <!-- /.post -->
+
+
+                    <footer class="footer">
+                        <p>© Oluson 2016. All right reserved.</p>
+                        @*<div class="socials-footer">
+                                <a class="btn btn-facebook" href="#" title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a class="btn btn-twitter" href="#" title="Twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a class="btn btn-linkedin" href="#" title="LinkedIn">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a class="btn btn-flickr" href="#" title="Flickr">
+                                    <i class="fa fa-flickr"></i>
+                                </a>
+                                <a class="btn btn-pinterest" href="#" title="Pinterest">
+                                    <i class="fa fa-pinterest"></i>
+                                </a>
+                                <a class="btn btn-tumblr" href="#" title="Tumblr">
+                                    <i class="fa fa-tumblr"></i>
+                                </a>
+                                <a class="btn btn-dropbox" href="#" title="Dropbox">
+                                    <i class="fa fa-dropbox"></i>
+                                </a>
+                                <a class="btn btn-google-plus" href="#" title="Google+">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                                <a class="btn btn-instagram" href="#" title="Instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a class="btn btn-github" href="#" title="GitHub">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                                <a class="btn btn-bitbucket" href="#" title="Bitbucket">
+                                    <i class="fa fa-bitbucket"></i>
+                                </a>
+                                <a class="btn btn-vk" href="#" title="VK">
+                                    <i class="fa fa-vk"></i>
+                                </a>
+                            </div>*@ <!-- /.socials-footer -->
+                    </footer> <!-- /footer -->
+
+                </div>
+            </div> <!-- /#primary -->
+            <!-- Scripts -->
+            <script src="~/Grape/js/jquery-1.11.0.min.js"></script>
+            <script src="~/Grape/js/custom.js"></script>
 
 </body>
 </html>
