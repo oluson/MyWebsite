@@ -37,7 +37,7 @@
                 <img class="img-responsive project-image" src="~/assets/projects/js.png" alt=""><!--Project thumb -->
 
                 <div class="hover-mask">
-                    <h2 class="project-title">JavaScript Exercise</h2><!--Project Title -->
+                    <h2 class="project-title">Javascript Exercise</h2><!--Project Title -->
                     <p>javascript.com</p><!--Project Subtitle -->
                 </div>
 
@@ -64,13 +64,13 @@
 
                                 <div class="tab-content">
                                     <div id="program1" class="tab-pane fade in active">
-                                        <h3>Click Start button to start the program.</h3>
+                                        <h3>Please enter five numbers to find the Minimum, Maximum, Mean, Sum and Product of the numbers.<br/> Click the Start button below and follow on-screen prompt.</h3>
                                         <p>
                                             <button type="button" class="btn btn-primary" onclick="StartProgram1()">Start</button>
                                             <div id="output1">
 
                                             </div>
-                                            <button data-toggle="collapse" data-target="#demo">View Code</button>
+                                            <button data-toggle="collapse" data-target="#demo" class="btn btn-success">View Code</button>
                                             <br />
                                             <div id="demo" class="collapse" style="color:#8aaad9">
                                                 function StartProgram1() { <br />
@@ -80,7 +80,7 @@
                                                 var mean = 0;<br />
                                                 var product = 1;<br />
                                                 for (var i = 0; i < 5; i++) {<br />
-                                                var number = prompt("Please enter number", "");<br />
+                                                var number = prompt("Please a enter number", "");<br />
                                                 sum += parseFloat(number);<br />
                                                 product *= parseFloat(number);<br />
                                                 if (i == 0) {<br />
@@ -101,14 +101,14 @@
                                         </p>
                                     </div>
                                     <div id="menu1" class="tab-pane fade">
-                                        <h3>Enter number to calculate the factorial.</h3>
+                                        <h3>Enter a number to calculate it's factorial.</h3>
                                         <p>
                                             <input type="text" class="form-control" id="txtnumber" placeholder="Enter Number" /><br />
                                             <button type="button" class="btn btn-primary" onclick="StartProgram2()">Calculate Factorial</button>
                                             <div id="output2">
 
                                             </div>
-                                            <button data-toggle="collapse" data-target="#demo1">View Code</button>
+                                            <button data-toggle="collapse" data-target="#demo1"class="btn btn-success">View Code</button>
                                             <br />
                                             <div id="demo1" class="collapse" style="color:#8aaad9">
                                                 function StartProgram2() {<br />
@@ -141,7 +141,7 @@
                                             <div id="output3">
 
                                             </div>
-                                            <button data-toggle="collapse" data-target="#demo2">View Code</button>
+                                            <button data-toggle="collapse" data-target="#demo2"class="btn btn-success">View Code</button>
                                             <br />
                                             <div id="demo2" class="collapse" style="color:#8aaad9">
                                                 function StartProgram3() {<br />
@@ -166,14 +166,14 @@
                                         </p>
                                     </div>
                                     <div id="menu3" class="tab-pane fade">
-                                        <h3>Enter a word to check if it's a palindrome </h3>
+                                        <h3>Enter a word to see if it's a palindrome </h3>
                                         <p>
                                             <input type="text" class="form-control" id="txtword" placeholder="Enter word" /><br />
-                                            <button type="button" class="btn btn-danger" onclick="StartProgram4()">Check Palindrome</button>
+                                            <button type="button" class="btn btn-primary" onclick="StartProgram4()">Check Palindrome</button>
                                             <div id="output4">
 
                                             </div>
-                                            <button data-toggle="collapse" data-target="#demo3">View Code</button>
+                                            <button data-toggle="collapse" data-target="#demo3"class="btn btn-success">View Code</button>
                                             <br />
                                             <div id="demo3" class="collapse" style="color:#8aaad9">
                                                 function StartProgram4() {<br />
@@ -209,7 +209,7 @@
                                         var mean = 0;
                                         var product = 1;
                                         for (var i = 0; i < 5; i++) {
-                                            var number = prompt("Please enter number", "");
+                                            var number = prompt("Please enter a number", "");
                                             sum += parseFloat(number);
                                             product *= parseFloat(number);
                                             if (i == 0) {
@@ -302,14 +302,35 @@
             END PROJECT ITEM
             =============================================== -->
 
+            <a class="project-item icons" href="@Url.Action("Index","BlogPosts")" target="_blank" data-images="../assets/projects/blogging1.jpg,../assets/projects/blogging1.jpg">
 
-            <a class="project-item icons ui-kits" href="http://olusonbt.azurewebsites.net/" target="" data-images="../assets/projects/bt-screenshot2.jpg">
+                <img class="img-responsive project-image" src="~/assets/projects/blogger1.jpg" alt=""><!--Project thumb -->
+
+                <div class="hover-mask">
+                    <h2 class="project-title">Personal Blog</h2><!--Project Title -->
+                    <p>MVC Application</p><!--Project Subtitle -->
+                </div>
+
+                <!--==== Project Preview HTML ====-->
+
+                <div class="sr-only project-description">
+                    <p class="clearfix">The Personal Blog is a simple MVC application that is able to perform the CRUD operations for both blogposts and comments alike with other features such as searches, sorting, pagination and file attachments.It utilizes a relational database that was set up using Entity Framework CodeFirst Approach.</p>
+                    @*<img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">*@
+                    <p>This project was built using <span style="color:blueviolet">Asp.Net MVC5, C#, SQL, LINQ, CSS, HTML and Bootstrap</span>.</p>
+                </div>
+
+            </a><!--End Project Item -->
+
+
+
+
+            <a class="project-item icons ui-kits" href="http://olusonbt.azurewebsites.net/" target="_blank" data-images="../assets/projects/bt-screenshot2.jpg">
 
                 <img class="img-responsive project-image" src="~/assets/projects/Bugtracker-2.png" alt=""><!--Project thumb -->
 
                 <div class="hover-mask">
                     <h2 class="project-title">Bugtracker</h2><!--Project Title -->
-                    <p>olusonbt.azurewebsites.net</p><!--Project Subtitle -->
+                    <p>MVC Application</p><!--Project Subtitle -->
                 </div>
 
                 <!--==== Project Preview HTML ====-->
@@ -335,48 +356,8 @@
 
             </a><!--End Project Item -->
 
-            <a class="project-item web-design ui-kits" href="#somelink" data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg">
-
-                <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
-
-                <div class="hover-mask">
-                    <h2 class="project-title">Singolo</h2><!--Project Title -->
-                    <p>amazon.com</p><!--Project Subtitle -->
-                </div>
-
-                <!--==== Project Preview HTML ====-->
-
-                <div class="sr-only project-description">
-                    <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                    <img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                </div>
-
-            </a><!--End Project Item -->
-
-            <a class="project-item ui-kits" href="http://www.google.com" data-images="~/assets/projects/project-slide.jpg">
-
-                <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
-
-                <div class="hover-mask">
-                    <h2 class="project-title">Chat UI Concept</h2><!--Project Title -->
-                    <p>google.com</p><!--Project Subtitle -->
-                </div>
-
-                <!--==== Project Preview HTML ====-->
-
-                <div class="sr-only project-description">
-                    <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                    <img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                    <p>Nam eget urna pellentesque nisl ultrices dapibus. Mauris accumsan vehicula nisl, sed tempus mauris facilisis eu. Donec a iaculis nisi, quis malesuada justo. Pellentesque ut enim sit amet ipsum dignissim egestas. Morbi tincidunt rhoncus urna eget placerat.</p>
-                </div>
-
-            </a><!--End Project Item -->
-
-            <a class="project-item icons" href="#somelink" data-images="~/assets/projects/project-slide.jpg">
+             
+            @*<a class="project-item icons" href="#somelink" data-images="~/assets/projects/project-slide.jpg">
 
                 <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
 
@@ -394,9 +375,9 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu. Nam eget urna pellentesque nisl ultrices dapibus. Mauris accumsan vehicula nisl, sed tempus mauris facilisis eu. Donec a iaculis nisi, quis malesuada justo. Pellentesque ut enim sit amet ipsum dignissim egestas. Morbi tincidunt rhoncus urna eget placerat.</p>
                 </div>
 
-            </a><!--End Project Item -->
+            </a>*@<!--End Project Item -->
 
-            <a class="project-item web-design" href="#somelink" data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg">
+            @*<a class="project-item web-design" href="#somelink" data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg">
 
                 <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
 
@@ -414,9 +395,9 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
                 </div>
 
-            </a><!--End Project Item -->
+            </a>*@<!--End Project Item -->
 
-            <a class="project-item web-design" href="http://www.google.com" data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg">
+            @*<a class="project-item web-design" href="http://www.google.com" data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg">
 
                 <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
 
@@ -435,45 +416,26 @@
                     <p>Nam eget urna pellentesque nisl ultrices dapibus. Mauris accumsan vehicula nisl, sed tempus mauris facilisis eu. Donec a iaculis nisi, quis malesuada justo. Pellentesque ut enim sit amet ipsum dignissim egestas. Morbi tincidunt rhoncus urna eget placerat.</p>
                 </div>
 
-            </a><!--End Project Item -->
+            </a>*@<!--End Project Item -->
 
-            <a class="project-item icons" href="#somelink" data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg">
+           
+            <a class="project-item web-design" @*href="#somelink"*@ @*data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg"*@>
 
-                <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
+                <img class="img-responsive project-image" src="~/assets/projects/budget2.jpg" alt=""><!--Project thumb -->
 
                 <div class="hover-mask">
-                    <h2 class="project-title">Social Media Icons</h2><!--Project Title -->
-                    <p>microsoft.com</p><!--Project Subtitle -->
+                    <h2 class="project-title">Budget App--Coming Soon</h2><!--Project Title -->
+                    <p>MVC Application</p><!--Project Subtitle -->
                 </div>
 
                 <!--==== Project Preview HTML ====-->
 
-                <div class="sr-only project-description">
-                    <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                    <img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu. Nam eget urna pellentesque nisl ultrices dapibus. Mauris accumsan vehicula nisl, sed tempus mauris facilisis eu. Donec a iaculis nisi, quis malesuada justo. Pellentesque ut enim sit amet ipsum dignissim egestas. Morbi tincidunt rhoncus urna eget placerat.</p>
-                </div>
-
-            </a><!--End Project Item -->
-
-            <a class="project-item web-design" href="#somelink" data-images="~/assets/projects/project-slide.jpg,~/assets/projects/project-slide.jpg">
-
-                <img class="img-responsive project-image" src="~/assets/projects/project-thumb.jpg" alt=""><!--Project thumb -->
-
-                <div class="hover-mask">
-                    <h2 class="project-title">Explore</h2><!--Project Title -->
-                    <p>amazon.com</p><!--Project Subtitle -->
-                </div>
-
-                <!--==== Project Preview HTML ====-->
-
-                <div class="sr-only project-description">
+                @*<div class="sr-only project-description">
                     <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
                     <img class="img-responsive img-center" src="~/assets/projects/company-logo.png" alt="">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-                </div>
+                </div>*@
 
             </a><!--End Project Item -->
 
