@@ -461,10 +461,16 @@
     <Content Include="assets\projects\budget.jpg" />
     <Content Include="assets\projects\budget1.jpg" />
     <Content Include="assets\projects\budget2.jpg" />
+    <Content Include="assets\projects\budget5.jpg" />
     <Content Include="assets\projects\Bugtracker-2.png" />
     <Content Include="assets\projects\Bugtracker.png" />
     <Content Include="assets\projects\company-logo.png" />
     <Content Include="assets\projects\js.png" />
+    <Content Include="assets\projects\photo-15.jpg" />
+    <Content Include="assets\projects\photo-18.jpg" />
+    <Content Include="assets\projects\photo-23a.jpg" />
+    <Content Include="assets\projects\photo-24a.jpg" />
+    <Content Include="assets\projects\photo-25a.jpg" />
     <Content Include="assets\projects\Prep.jpg" />
     <Content Include="assets\projects\project-slide.jpg" />
     <Content Include="assets\projects\project-thumb.jpg" />
